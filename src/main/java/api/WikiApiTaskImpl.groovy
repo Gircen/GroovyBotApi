@@ -1,23 +1,19 @@
 package api
 
-import api.interfaces.IApiTask
+import api.impl.AbstractApiTaskImpl
 import api.interfaces.IHandler
+import org.springframework.context.annotation.Bean
 
-class WikiApiTaskImpl implements IApiTask{
+class WikiApiTaskImpl extends AbstractApiTaskImpl{
     IHandler handler;
+    @Bean("wiki")
+    WikiApiTaskImpl getWiki(){
+        return new WikiApiTaskImpl();
+    }
     @Override
-    void setData(Object T) {
+    void work() {
 
     }
 
-    @Override
-    IHandler getResult() {
 
-        return IHandler;
-    }
-
-    @Override
-    void worker() {
-
-    }
 }

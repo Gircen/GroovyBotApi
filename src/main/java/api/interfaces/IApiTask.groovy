@@ -1,7 +1,6 @@
 package api.interfaces
 
-interface IApiTask {
-    public void setData(T);
-    public IHandler getResult();
-    void worker();
+interface IApiTask extends Runnable{
+    void setData(Map<String,String> commands);
+    IHandler getResult();
 }

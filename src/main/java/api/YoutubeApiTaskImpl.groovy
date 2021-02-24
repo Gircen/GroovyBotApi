@@ -1,23 +1,15 @@
 package api
 
+import api.impl.AbstractApiTaskImpl
 import api.interfaces.IApiTask
 import api.interfaces.IHandler
+import org.springframework.context.annotation.Bean
 
-class YoutubeApiTaskImpl implements IApiTask{
-    IHandler handler;
+class YoutubeApiTaskImpl extends AbstractApiTaskImpl{
+
     @Override
-    void setData(Object T) {
+    void work() {
 
     }
 
-    @Override
-    IHandler getResult() {
-
-        return IHandler;
-    }
-
-    @Override
-    void worker() {
-
-    }
 }
