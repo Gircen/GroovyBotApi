@@ -32,3 +32,4 @@ target/
 #remove artifact
 out/
 src/main/resources/application.yaml
+GoovyBotApi.iml
